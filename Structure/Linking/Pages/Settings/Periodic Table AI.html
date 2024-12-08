@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .periodic-table {
+            display: grid;
+            grid-template-columns: repeat(18, 50px); /* 18 groups/columns */
+            gap: 5px;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .element {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #e3e3e3;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 70px;
+            font-size: 0.8em;
+            position: relative;
+        }
+        .element .atomic-number {
+            font-size: 0.7em;
+            position: absolute;
+            top: 2px;
+            left: 5px;
+        }
+        .element .symbol {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .element .name {
+            font-size: 0.6em;
+        }
+        .spacer {
+            background-color: transparent;
+            border: none;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Periodic Table</h1>
+    <div class="periodic-table">
+        <!-- Hydrogen -->
+        <div class="element">
+            <div class="atomic-number">1</div>
+            <div class="symbol">H</div>
+            <div class="name">Hydrogen</div>
+        </div>
+        <!-- Empty spaces for alignment -->
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <!-- Helium -->
+        <div class="element">
+            <div class="atomic-number">2</div>
+            <div class="symbol">He</div>
+            <div class="name">Helium</div>
+        </div>
+        <!-- Row 2 -->
+        <div class="element">
+            <div class="atomic-number">3</div>
+            <div class="symbol">Li</div>
+            <div class="name">Lithium</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">4</div>
+            <div class="symbol">Be</div>
+            <div class="name">Beryllium</div>
+        </div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="element">
+            <div class="atomic-number">5</div>
+            <div class="symbol">B</div>
+            <div class="name">Boron</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">6</div>
+            <div class="symbol">C</div>
+            <div class="name">Carbon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">7</div>
+            <div class="symbol">N</div>
+            <div class="name">Nitrogen</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">8</div>
+            <div class="symbol">O</div>
+            <div class="name">Oxygen</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">9</div>
+            <div class="symbol">F</div>
+            <div class="name">Fluorine</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <div class="element">
+            <div class="atomic-number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+       
+
