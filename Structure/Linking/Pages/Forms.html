@@ -6,30 +6,90 @@
     </title>
 </head>   
 <body>
-      <p>
-             <h1> 
-                Learning Forms
-             </h1>
-     </p>    
+    <img src="../Assets/Smit Logo.png" height="200" width="200">    
+    <p>
+           <h1> 
+               Registration Form
+           </h1>
+   </p>
+<form>
+<p>
+    Name
+    <input type="text" name="username"
+    maxlength="5" size="30"
+    required
+    />
+</p>
+<p>
+    Surname
+    <input type="text" name="username"
+    maxlength="5" size="30"
+    required
+    />
+</p>
+<p>
+    Email
+    <input type="email" required/>
+</p>
+<p>
+    Contact
+<input type="number">
+</p>
+<p>
+    CNIC
+    <input type="number"/>
+</p>
+<p>
+    DOB
+    <input type="date"/>
+</p>
+<p>
+    Last Education
+    <input type="text"/>
+</p>
+<p>
+    Permanet Address
+    <input type="text" name="" id="">
+</p>
+<p>
+    Campus
+    <select name="city" id="">
+        <option value="malir">Malir</option>
+        <option value="Gulshan">Gulshan</option>
+        <option value="Bahudrabad">Bahudrabad</option>
+        <option value="Zaiton">Zaiton It Park</option>
+    </select>
+</p>
+<p>
+    gender:
+    <br>
+    <input type="radio" value="male" name="gender" checked id="male-btn">
+    <label for="male-btn"> Male</label>
+    <input type="radio" value="female" name="gender" id="female-btn">
+    <label for="female-btn">Female</label>
+</p>
+
+<p>
+    Course Slection
+    <br>
+    <input id="opt1" type="checkbox" name="skills" value="" checked> 
+    <label for="opt1">Web Development</label>
+    <input id="opt2" type="checkbox" name="skills" value="opt2"> 
+    <label for="opt2">Graphic Designing</label><br>
+    <input id="opt3" type="checkbox" name="skills" value="opt3">
+    <label for="opt3">AI&Ml</label>
+    <input id="opt4" type="checkbox" name="skills" value="opt4"> 
+    <label for="opt4">Introduction Programming</label>
+</p>
 
 
+<p>
+    write comments why you (SMIT)
+    <textarea name="comments"  cols="20" rows="5">
+    </textarea>
+</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<input type="submit" value="submit">
+</form>
 
 </body>
