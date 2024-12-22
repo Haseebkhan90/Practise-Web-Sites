@@ -1,0 +1,19 @@
+body{
+    background-color: rgba(35, 131, 148, 0.329);
+}
+.form{
+    background-color : rgba(59, 179, 113, 0.671);
+}
+.main{
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    margin: 10px;
+    width: 90%;
+    background-color: lightgreen;
+ 
+}
+.box1{
+    height: 5%;
+    width: 2.5%;
+    background-color: aqua;
+
+}
