@@ -1,8 +1,8 @@
 body{
-    background-color: rgba(35, 131, 148, 0.329);
+    background-color: rgba(103, 119, 122, 0.548);
 }
 .form{
-    background-color : rgba(59, 179, 113, 0.671);
+    background-color : rgba(30, 238, 127, 0.671);
 }
 .main{
     border: 1px solid rgba(0, 0, 0, 0.87);
@@ -14,6 +14,50 @@ body{
 .box1{
     height: 5%;
     width: 2.5%;
-    background-color: aqua;
+}
+.new{
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    margin: 10px;
+    width: 90%;
+    background-color: rgb(238, 178, 144); 
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: cadetblue;
+}
+h2{
+    background-image: url(../ASSETS/Image\ 2.jpg);
+    border-image-outset: 199px;
+    
+}
+h3::first-letter{
+    font-size: 3em;
+    text-decoration: underline;
+}
+h3:hover{
+    color: coral;
+}
+a:link{
+    color: goldenrod;
+}
+a:visited{
+    color: black;
+}
+a:active{
+    color: green;
+}
+a{
+    text-decoration: none;
+}
+input:focus{
+    padding: 10px;
+}
+.div{
+    height: 50%;
+    width: 70%;
+    background-color: forestgreen;
 
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
 }

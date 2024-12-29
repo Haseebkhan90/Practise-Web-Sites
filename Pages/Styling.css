@@ -1,5 +1,7 @@
 body{
-  background-color: #36363644;
+  background-color: #00ffd554;
+  margin: 0%;
+  padding: 0%;
 }
 h1{
     table-layout: auto;
@@ -64,7 +66,11 @@ color: black;
 #t7{
   background-color: rgb(216, 219, 44);
 color: black;
-
+}
+#t8{
+  background-color: rgb(216, 219, 44);
+color: black;
+}
 .main{
  background-color: rgb(109, 163, 39);
  color: black;
