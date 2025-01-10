@@ -1,0 +1,21 @@
+body{
+    color: antiquewhite;
+    background-color: lightcoral;
+}
+ol{
+    ;
+    list-style-type: square;
+    list-style-position: inside;
+}
+ul{
+    list-style-type: circle;
+    list-style-type: circle;
+}
+table{
+    border: 2px solid black;
+}
+td{
+    border: 1px solid blue;
+    padding: 3px;
+}
+

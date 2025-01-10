@@ -61,3 +61,41 @@ input:focus{
     min-height: 300px;
     max-height: 300px;
 }
+.box{
+    color: aquamarine;
+    height: 50px;
+    width: 30%;
+    border: 20px;
+    margin: 50px;
+    border-radius: 20%;
+}
+.abs{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}
+.rel{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    position: relative;
+}
+.child{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    position: absolute;
+    top: 5%;
+    right: 5%; 
+}
+.child2{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: absolute;
+    top: 5%;
+    : 5%; 
+}
