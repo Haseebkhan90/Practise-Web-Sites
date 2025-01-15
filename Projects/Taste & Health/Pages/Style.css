@@ -5,16 +5,22 @@
 body {
   font-family: Arial;
   padding: 10px;
-  background: #5CB338;
+  background: #dbb858;
+
+}
+nav{
+  display: inline block;
+}
+.logo{
+  display: block;
+}
+
+.search-bar{
+  display: inline-block;
+  background-color: rgb(255, 247, 247);
 }
 
 /* Header/Blog Title */
-.header {
-  padding: 5px;
-  text-align: left;
-  background: #ECE852;
-
-}
 #p1{
   font-size: 30px;
   font-style: italic;
@@ -31,6 +37,9 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #FFC145;
+  display: inline-block;
+  width: 80%;
+  display: inline block;
 }
 
 /* Style the topnav links */
@@ -108,4 +117,11 @@ body {
     float: none;
     width: 100%;
   }
+}
+.card>h2{
+  font-weight: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card>.fakeimg{
+  border-image-width: 20px;
 }

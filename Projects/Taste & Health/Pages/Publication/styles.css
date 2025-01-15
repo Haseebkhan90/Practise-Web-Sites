@@ -1,0 +1,43 @@
+.nav{
+    background-color: lightgrey;
+    display: inline-block;
+}
+nav , ul , li{
+    display: inline-block
+}
+.box{
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+}
+.one{
+    background-color: blue;
+    font: 2em;
+
+}
+.three{
+    background-color: rgb(255, 200, 0);
+    font: 1em;
+}
+.two{
+    font: 3em;
+    background-color: rgb(255, 0, 0);
+}
+.main{
+    height: 400px;
+    border: 2px solid rgb(0, 0, 0);
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+.main2{
+    height: 500px;
+    border: 2px solid rgb(0, 0, 0);
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-flow: ;
+}
