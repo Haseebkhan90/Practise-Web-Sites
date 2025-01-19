@@ -1,22 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABC Books</title>
+    <title>Alphabet Book</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="main">
         <h1>
             <marquee direction="left">
-                Kids Learning Book
+                 ALPHABET BOOK
             </marquee>
         </h1>
-        <nav>
-            
-        </nav>
-
     </div>
+    <div class="page">
+        <div class="letter" id="letter">A</div>
+        <div class="word" id="word">Apple</div>
+        <div class="illustration-placeholder">
+            <img src="../ASSETS/cover abc.jpg" alt="burger" height="200px" width="200px">
+        </div>
+    </div>
+    <div class="navigation">
+        <button id="prev" onclick="prevPage()" disabled>Previous</button>
+        <button id="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <script>
+        const alphabet = [
+            { letter: "A", word: "Apple" },
+            { letter: "B", word: "Ball" },
+            { letter: "C", word: "Cat" },
+            { letter: "D", word: "Dog" },
+            { letter: "E", word: "Elephant" },
+            { letter: "F", word: "Fish" },
+            { letter: "G", word: "Goat" },
+            { letter: "H", word: "House" },
+            { letter: "I", word: "Ice cream" },
+            { letter: "J", word: "Jelly" },
+            { letter: "K", word: "Kite" },
+            { letter: "L", word: "Lion" },
+            { letter: "M", word: "Monkey" },
+            { letter: "N", word: "Nest" },
+            { letter: "O", word: "Owl" },
+            { letter: "P", word: "Penguin" },
+            { letter: "Q", word: "Queen" },
+            { letter: "R", word: "Rabbit" },
+            { letter: "S", word: "Sun" },
+            { letter: "T", word: "Tiger" },
+            { letter: "U", word: "Umbrella" },
+            { letter: "V", word: "Violin" },
+            { letter: "W", word: "Whale" },
+            { letter: "X", word: "Xylophone" },
+            { letter: "Y", word: "Yacht" },
+            { letter: "Z", word: "Zebra" }
+        ];
+
+        let currentIndex = 0;
+
+        function updatePage() {
+            document.getElementById('letter').textContent = alphabet[currentIndex].letter;
+            document.getElementById('word').textContent = alphabet[currentIndex].word;
+
+            document.getElementById('prev').disabled = currentIndex === 0;
+            document.getElementById('next').disabled = currentIndex === alphabet.length - 1;
+        }
+
+        function nextPage() {
+            if (currentIndex < alphabet.length - 1) {
+                currentIndex++;
+                updatePage();
+            }
+        }
+
+        function prevPage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updatePage();
+            }
+        }
+    </script>
+
 </body>
+
 </html>
