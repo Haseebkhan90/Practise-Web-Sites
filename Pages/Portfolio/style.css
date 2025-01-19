@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(75, 35, 44);
+
+}
+
+header{
+    color: #1b1212;
+    background-color: #3a58ac;
+    padding: 10px;
+}
+
+.nav-links {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1b1212;
+    color: white;
+    font-size: 1.5;
+}
+
+.form {
+    height: 300px;
+    border: 5px solid black;
+    border-radius: 15px;
+    display: flex;
+    background-color: #11110d;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: column;
+    font: 1.5em sans-serif;
+    color: white;
+}
+
+.section-about {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    word-spacing: 0.5em;
+    height: fit-content;
+    border: 5px solid black;
+    border-radius: 50px;
+    text-align: center;
+    background: #EB5757;
+    background: #6D6027;
+    background: -webkit-linear-gradient(to right, #D3CBB8, #6D6027);
+    background: linear-gradient(to right, #D3CBB8, #6D6027);
+   
+
+}
+
+.section-home {
+    height: 250px;
+    /* width: 2500px; */
+    border: 5px solid black;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    background: #EDE574;
+    background: -webkit-linear-gradient(to right, #E1F5C4, #EDE574);
+    background: linear-gradient(to right, #E1F5C4, #EDE574);
+}
+
+.main {
+    height: fit-content;
+    border: 1px solid white;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    gap: 10px;
+    gap: 10px 20px;
+    row-gap: 10px;
+    column-gap: 20px;
+    background: #334d50;
+    background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);
+    background: linear-gradient(to right, #cbcaa5, #334d50);
+    /* background-image: url(../Assignment/ASSETS/download\ \(1\).jpg); */
+}
+.section-projects{
+    height: 250px;
+    border: 5px solid black;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    background: #40bb3e;
+}
