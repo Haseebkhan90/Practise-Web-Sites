@@ -254,3 +254,24 @@ h1 {
   background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
   background: linear-gradient(to bottom, #93F9B9, #1D976C);
 }
+.kids-book{
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid rgb(0, 0, 0);
+  margin: 0;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
+  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+}
+.Javascript{
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid rgb(0, 0, 0);
+  margin: 0;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
+  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+}
+

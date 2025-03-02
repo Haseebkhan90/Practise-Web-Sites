@@ -1,0 +1,57 @@
+body{
+    background-color: whitesmoke;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card1{
+    height: 500px;
+    width: 500px;
+    /* border: 1px solid rgb(255, 255, 255); */
+    align-content: center;
+    color: #4267B2;
+}
+p{
+    color: black;
+}
+.form{
+    height: 500px;
+    width: 500px;
+    /* border: 1px solid rgb(255, 255, 255); */
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.contact-form{
+   gap: 10px;
+}
+#facebook{
+    color: rgb(0, 128, 255);
+}
+#button{
+    background-color: rgba(0, 128, 0, 0.843);
+    color: white;
+    width: 300px;
+    height: 30px;
+}
+#login{
+    color: white;
+    background-color: #4267B2 ;
+    width: 300px;
+    height: 30px;
+}
+#name{
+    width: 300px;
+    height: 30px;
+}
+#email{
+    width: 300px;
+    height: 30px;
+}
+.span{
+    width: 300px;
+    height: 30px;
+    color: #4267B2;
+    text-align: center;
+}
