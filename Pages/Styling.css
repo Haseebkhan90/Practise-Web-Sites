@@ -8,14 +8,13 @@
   color: lavenderblush;
   height: 400px;
   margin: 0;
-  display: flex
-  flex-wrap : wrap;
+  display: flex flex-wrap: wrap;
   justify-content: center;
-  align-items :left;
+  align-items: left;
   font-size: 3em;
   background: #870000;
-  background: -webkit-linear-gradient(to bottom, #190A05, #870000);;
-  background: linear-gradient(to bottom, #190A05, #870000); 
+  background: -webkit-linear-gradient(to bottom, #190A05, #870000);
+  background: linear-gradient(to bottom, #190A05, #870000);
 
 }
 
@@ -47,8 +46,8 @@ nav {
   display: flex;
   flex-flow: wrap;
   background: #636363;
- background: -webkit-linear-gradient(to bottom, #a2ab58, #636363);
- background: linear-gradient(to bottom, #a2ab58, #636363);
+  background: -webkit-linear-gradient(to bottom, #a2ab58, #636363);
+  background: linear-gradient(to bottom, #a2ab58, #636363);
 }
 
 .logo {
@@ -114,10 +113,10 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  align-content:center ;
+  align-content: center;
   gap: 10px;
-  background: #000000;  
-  background: -webkit-linear-gradient(to bottom, #434343, #000000);  
+  background: #000000;
+  background: -webkit-linear-gradient(to bottom, #434343, #000000);
   background: linear-gradient(to bottom, #434343, #000000);
 }
 
@@ -234,37 +233,8 @@ h1 {
   background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
   background: linear-gradient(to bottom, #93F9B9, #1D976C);
 }
-.abc-book{
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
-}
-.portfolio{
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
-}
-.kids-book{
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
-}
-.Javascript{
+
+.abc-book {
   width: 320px;
   height: 50px;
   padding: 10px;
@@ -275,3 +245,57 @@ h1 {
   background: linear-gradient(to bottom, #93F9B9, #1D976C);
 }
 
+.portfolio {
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid rgb(0, 0, 0);
+  margin: 0;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
+  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+}
+
+.kids-book {
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid rgb(0, 0, 0);
+  margin: 0;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
+  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+}
+
+.Javascript {
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid rgb(0, 0, 0);
+  margin: 0;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
+  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+}
+
+.Clones {
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid rgb(0, 0, 0);
+  margin: 0;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
+  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+}
+
+.FinalPort {
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid rgb(0, 0, 0);
+  margin: 0;
+  background: #1D976C;
+  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
+  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+}
