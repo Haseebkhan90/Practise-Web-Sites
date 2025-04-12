@@ -399,3 +399,13 @@ function result(_totalmarks, _obtMarks){
 }
 result(232,111)
 result(300,500)
+
+
+/// Recursing
+// Local 
+// Global
+function otpgenerator(){
+    return Math.random(Math.random*900+1000);
+
+}
+ console.log(otpgenerator);

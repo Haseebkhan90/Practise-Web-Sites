@@ -1,301 +1,197 @@
-/* css variables */
 :root {
-  --gColor: linear-gradient(14deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 94%, rgba(252, 176, 69, 1) 100%);
-
-}
-
-.details {
-  color: lavenderblush;
-  height: 400px;
-  margin: 0;
-  display: flex flex-wrap: wrap;
-  justify-content: center;
-  align-items: left;
-  font-size: 3em;
-  background: #870000;
-  background: -webkit-linear-gradient(to bottom, #190A05, #870000);
-  background: linear-gradient(to bottom, #190A05, #870000);
-
+  --primary: #1e3a8a;
+  --accent: #00c4cc;
+  --bg: #f0f4f8;
+  --text: #1a1a1a;
+  --card-bg: white;
+  --dark-bg: #121212;
+  --dark-card: #1e1e2f;
+  --dark-text: #eee;
 }
 
 body {
-  background: #0F2027;
-  background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
-  background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
 nav {
-  background-repeat: no-repeat;
-  background-size: contain;
-  image-rendering: crisp-edges;
-  height: 90vh;
-  width: 90vw;
-  border: 1px solid black;
-  overflow: scroll;
-  border: 2px solid black;
-  height: 150px;
-  color: rgb(0, 0, 0);
-  width: 5000px;
-  display: inline-block;
-  align-items: normal;
-  font-size: large;
-  font-size: 1em;
-  align-content: baseline;
+  background-color: var(--primary);
+  color: white;
   display: flex;
-  flex-flow: wrap;
-  background: #636363;
-  background: -webkit-linear-gradient(to bottom, #a2ab58, #636363);
-  background: linear-gradient(to bottom, #a2ab58, #636363);
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  flex-wrap: wrap;
 }
 
-.logo {
-  color: #000;
-  background-color: black;
-  display: inline-block;
-  height: 100px;
-  align-content: baseline;
-  align-items: center;
+.logo img {
+  height: 60px;
+  border-radius: 50%;
 }
 
 .top {
-  display: inline-block;
-  align-items: normal;
-  font-size: large;
-  font-size: 2em;
-  font-variant: normal;
-  align-content: baseline;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8em;
   font-weight: bold;
-  font-size: 5em;
-  text-transform: capitalize;
-  text-decoration: solid;
-  text-align: center;
-  color: #FFEFBA;
+  margin-left: 10px;
+}
 
-
-
+.toggle-btn {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 h1 {
-  table-layout: auto;
-  background: #757F9A;
-  background: -webkit-linear-gradient(to bottom, #D7DDE8, #757F9A);
-  background: linear-gradient(to bottom, #D7DDE8, #757F9A);
-  border: 5px solid rgb(0, 0, 0);
-  align-content: center;
-  text-decoration: underline;
   text-align: center;
-  text-transform: capitalize;
-  font-weight: bold;
-  font-style: oblique;
-  font-size: 3.5em;
-  text-transform: uppercase;
-  color: #000000;
+  margin-top: 40px;
+  font-size: 2.5em;
+  color: var(--primary);
 }
 
+h3 {
+  text-align: center;
+  max-width: 900px;
+  margin: 10px auto 40px;
+  font-weight: 400;
+}
 
 .main-table {
-  text-decoration: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 30px 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-table > div {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 20px;
   text-align: center;
-  text-transform: capitalize;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.main-table > div:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.main-table a {
+  font-size: 1.3em;
+  text-decoration: none;
+  color: var(--primary);
   font-weight: bold;
-  font-style: normal;
-  font-size: 2em;
-  text-transform: uppercase;
-  color: #000000;
-  height: 400px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  display: flex;
-  flex-direction: ;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  align-content: center;
-  gap: 10px;
-  background: #000000;
-  background: -webkit-linear-gradient(to bottom, #434343, #000000);
-  background: linear-gradient(to bottom, #434343, #000000);
 }
 
-.cv {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+.main-table a:hover {
+  color: var(--accent);
 }
 
-.Form {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+/* Dark Mode */
+body.dark nav {
+  background-color: #222;
 }
 
-.Form {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
-  background-color: wheat;
-
+body.dark h1 {
+  color: #00eaff;
 }
 
-.Periodic {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
-  background-color: wheat;
-
+body.dark .main-table > div {
+  background: var(--dark-card);
 }
 
-.Gallery {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+body.dark .main-table a {
+  color: #00eaff;
+}
+/* Fade-in Animation */
+body {
+  opacity: 0;
+  animation: fadeInBody 1s ease forwards;
 }
 
-.Internal {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+@keyframes fadeInBody {
+  to {
+      opacity: 1;
+  }
 }
 
-.Practise {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+/* Slide-up Cards on Load */
+.main-table > div {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 0.8s ease-out forwards;
+  animation-delay: calc(0.1s * var(--i));
 }
 
-.Animation {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+@keyframes slideUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
-.Project {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+/* Add custom property on each card via inline style (HTML) */
+.main-table > div:nth-child(1) { --i: 1; }
+.main-table > div:nth-child(2) { --i: 2; }
+.main-table > div:nth-child(3) { --i: 3; }
+.main-table > div:nth-child(4) { --i: 4; }
+.main-table > div:nth-child(5) { --i: 5; }
+.main-table > div:nth-child(6) { --i: 6; }
+.main-table > div:nth-child(7) { --i: 7; }
+.main-table > div:nth-child(8) { --i: 8; }
+.main-table > div:nth-child(9) { --i: 9; }
+.main-table > div:nth-child(10) { --i: 10; }
+.main-table > div:nth-child(11) { --i: 11; }
+.main-table > div:nth-child(12) { --i: 12; }
+.main-table > div:nth-child(13) { --i: 13; }
+.main-table > div:nth-child(14) { --i: 14; }
+
+/* Hover Bounce on Toggle Button */
+.toggle-btn {
+  transition: all 0.2s ease;
 }
 
-.Inframe {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+.toggle-btn:hover {
+  transform: scale(1.1);
+  background-color: var(--accent);
+  border-color: var(--accent);
 }
 
-.abc-book {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+/* Smooth color transitions */
+body, nav, .main-table > div, .toggle-btn {
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
+}
+/* Smooth transitions for key elements */
+body, nav, .top, h1, h3, .main-table > div, .main-table a, .toggle-btn {
+  transition: all 0.4s ease-in-out;
 }
 
-.portfolio {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+/* Smooth background and text color shift on dark mode */
+body, nav, .main-table > div, .toggle-btn {
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.kids-book {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+/* Anchor tag color hover transition */
+.main-table a {
+  transition: color 0.3s ease;
 }
 
-.Javascript {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
-}
-
-.Clones {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
-}
-
-.FinalPort {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid rgb(0, 0, 0);
-  margin: 0;
-  background: #1D976C;
-  background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);
-  background: linear-gradient(to bottom, #93F9B9, #1D976C);
+/* Scale and shadow on hover for link cards */
+.main-table > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
