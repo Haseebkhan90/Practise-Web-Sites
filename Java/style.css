@@ -31,8 +31,13 @@ body {
 }
 
 @keyframes scroll-left {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .hero {
@@ -43,7 +48,12 @@ body {
     padding: 30px;
 }
 
-.container1, .container2, .container3, .container4, .container5 {
+.container1,
+.container2,
+.container3,
+.container4,
+.container6,
+.container5 {
     background-color: white;
     border: 2px solid #ddd;
     border-radius: 20px;
@@ -56,6 +66,7 @@ body {
 .container1:hover,
 .container2:hover,
 .container3:hover,
+.container6:hover,
 .container4:hover,
 .container5:hover {
     transform: translateY(-5px);
@@ -90,6 +101,7 @@ body.dark .header {
 
 body.dark .container1,
 body.dark .container2,
+body.dark .container6,
 body.dark .container3,
 body.dark .container4,
 body.dark .container5 {
@@ -100,16 +112,3 @@ body.dark .container5 {
 body.dark a {
     color: #00c3ff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

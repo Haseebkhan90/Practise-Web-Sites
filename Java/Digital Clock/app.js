@@ -1,44 +1,4 @@
-// const hrSpan = document.getElementById('hr');
-// const minSpan = document.getElementById('min');
-// const secSpan = document.getElementById('sec');
-// const ampmSpan = document.getElementById('ampm');
-// const dateDiv = document.getElementById('date');
 
-// const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-// const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-// function formatTime(unit) {
-//     return unit < 10 ? "0" + unit : unit;
-// }
-
-// function updateClock() {
-//     const now = new Date();
-//     let hours = now.getHours();
-//     const minutes = now.getMinutes();
-//     const seconds = now.getSeconds();
-//     let ampm = "AM";
-
-//     if (hours >= 12) {
-//         ampm = "PM";
-//         if (hours > 12) hours -= 12;
-//     }
-//     if (hours === 0) hours = 12;
-
-//     hrSpan.innerText = formatTime(hours);
-//     minSpan.innerText = formatTime(minutes);
-//     secSpan.innerText = formatTime(seconds);
-//     ampmSpan.innerText = ampm;
-
-//     const day = dayNames[now.getDay()];
-//     const date = now.getDate();
-//     const month = monthNames[now.getMonth()];
-//     const year = now.getFullYear();
-
-//     dateDiv.innerText = `${day}, ${month} ${date}, ${year}`;
-// }
-
-// setInterval(updateClock, 1000);
-// updateClock(); // run once immediately
 var currentDate = new Date();
 
 var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -64,10 +24,10 @@ console.log(Math.round(diff));
 var hrSpan = document.getElementById('hr');
 var minSpan = document.getElementById('min');
 var secSpan = document.getElementById('sec');
+var ampmSpan = document.getElementById('ampm');
+var dateDiv = document.getElementById('date');
 
-console.log(hrSpan.innerText);
 
-// callback function
 setInterval(function () {
     var now = new Date();
     
@@ -83,5 +43,6 @@ setInterval(function () {
 
     minSpan.innerText = now.getMinutes();
     secSpan.innerText = now.getSeconds();
+    dateDiv.innerText = now.getDate();
 }, 1000);
 
