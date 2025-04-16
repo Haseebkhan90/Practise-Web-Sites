@@ -1,48 +1,32 @@
 
-var currentDate = new Date();
+        var currentDate = new Date();
+        var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        var hrSpan = document.getElementById('hr');
+        var minSpan = document.getElementById('min');
+        var secSpan = document.getElementById('sec');
+        var ampmSpan = document.getElementById('ampm');
+        var dayDiv = document.getElementById('day');
+        var monthDiv = document.getElementById('month');
+        var yearDiv = document.getElementById('year');
+        var weekDiv = document.getElementById('week');
 
-console.log(dayNames[currentDate.getDay()]);
-console.log('getMonth:', currentDate.getMonth());
-console.log('getFullYear:', currentDate.getFullYear());
-console.log('getHours:', currentDate.getHours());
-console.log('getMinutes:', currentDate.getMinutes());
-console.log('getMilliseconds:', currentDate.getMilliseconds());
-console.log('getTime:', currentDate.getTime());
+        setInterval(function () {
+            var now = new Date();
 
-var futureDate = new Date('June 11, 2028 15:30:00');
-console.log('date 2', futureDate.getMinutes());
+            if (now.getHours() > 12) {
+                hrSpan.innerText = now.getHours() - 12;
+            } else if (now.getHours() === 0) {
+                hrSpan.innerText = 12;
+            } else {
+                hrSpan.innerText = now.getHours();
+            }
 
-var mNow = currentDate.getTime();
-var mFuture = futureDate.getTime();
-var diff = mFuture - mNow;
-diff = diff / (1000 * 60 * 60 * 24 * 30 * 12);
-
-console.log(Math.round(diff));
-
-var hrSpan = document.getElementById('hr');
-var minSpan = document.getElementById('min');
-var secSpan = document.getElementById('sec');
-var ampmSpan = document.getElementById('ampm');
-var dateDiv = document.getElementById('date');
-
-
-setInterval(function () {
-    var now = new Date();
-    
-    if (now.getHours() > 12) {
-        hrSpan.innerText = now.getHours() - 12;
-    }
-    else if (now.getHours() === 0) {
-        hrSpan.innerText = 12;
-    }
-    else {
-        hrSpan.innerText = now.getHours();
-    }
-
-    minSpan.innerText = now.getMinutes();
-    secSpan.innerText = now.getSeconds();
-    dateDiv.innerText = now.getDate();
-}, 1000);
-
+            minSpan.innerText = now.getMinutes();
+            secSpan.innerText = now.getSeconds();
+            ampmSpan.innerText = now.getHours() >= 12 ? 'PM' : 'AM';
+            dayDiv.innerText = now.getDate();
+            monthDiv.innerText = now.getMonth() + 1;
+            yearDiv.innerText = now.getFullYear();
+            weekDiv.innerText = dayNames[now.getDay()];
+        }, 1000);

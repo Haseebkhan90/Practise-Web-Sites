@@ -1,70 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Digital Clock</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            color: #fff;
-        }
-
-        .watch-container {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            border: 2px solid rgb(255, 255, 255);
-            border-radius: 20px;
-            padding: 40px 60px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-
-        .clock {
-            font-size: 4em;
-            font-weight: bold;
-            color: #daffff;
-            text-shadow: 0 0 10px #00ffff;
-        }
-
-        .date {
-            margin-top: 20px;
-            font-size: 1.5em;
-            color: #ffffffcc;
-            text-shadow: 0 0 5px #ffffff33;
-        }
-
-        @media (max-width: 600px) {
-            .watch-container {
-                padding: 30px 20px;
-            }
-            .clock {
-                font-size: 3em;
-            }
-            .date {
-                font-size: 2em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-    <div class="watch-container">
-        <div class="clock">
-            <span id="hr">00</span>:
-            <span id="min">00</span>:
-            <span id="sec">00</span>
-            <span id="ampm">AM</span>
+    <h1>Digital Clock</h1>
+    <div class="clock">
+        <div class="row">
+            <span class="label">Day:</span>
+            <span id="week" class="value"></span>
         </div>
-        <div class="date" id="date">Loading date...</div>
+        <div class="row">
+            <span class="label">Date:</span>
+            <span id="day" class="value"></span> /
+            <span id="month" class="value"></span> /
+            <span id="year" class="value"></span>
+        </div>
+        <div class="row">
+            <span class="label">Time:</span>
+            <span id="hr" class="value"></span>:
+            <span id="min" class="value"></span>:
+            <span id="sec" class="value"></span>
+            <span id="ampm" class="value"></span>
+        </div>
     </div>
-
     <script src="./app.js"></script>
+
 </body>
+
 </html>
