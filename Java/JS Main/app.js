@@ -350,62 +350,62 @@
 // console.log(num9.toString());
 
 
-var sum2 = 5.7699;
-console.log(sum2.toFixed())
+// var sum2 = 5.7699;
+// console.log(sum2.toFixed())
 
-// Function //
+// // Function //
 
-function greeting(userName) {
-    console.log('welcome' + userName)
-}
-greeting('shazil');
-
-
-var a = prompt('enter name')
-greeting(a);
-
-function sums(a, b) {
-    console.log(a + b)
-}
-sums(5, 10);
+// function greeting(userName) {
+//     console.log('welcome' + userName)
+// }
+// greeting('shazil');
 
 
-function percent(_totalmarks, _obtMarks) {
+// var a = prompt('enter name')
+// greeting(a);
 
-    var per = _obtMarks / _totalmarks * 100;
-    console.log(per);
-    return per;
-}
-
-var calper = percent(550, 467);
-console.log(calper);
+// function sums(a, b) {
+//     console.log(a + b)
+// }
+// sums(5, 10);
 
 
-function grades(per) {
-    if (per >= 90) {
-        return 'A';
-    }
-    else if (per >= 80) {
-        return 'B';
-    }
-    else {
-        return 'c';
-    }
-}
-function result(_totalmarks, _obtMarks){
-     var x = percent(_totalmarks,_obtMarks);
-     var y = grades(x);
-    console.log('percent:',x,'grades',y)
-}
-result(232,111)
-result(300,500)
+// function percent(_totalmarks, _obtMarks) {
+
+//     var per = _obtMarks / _totalmarks * 100;
+//     console.log(per);
+//     return per;
+// }
+
+// var calper = percent(550, 467);
+// console.log(calper);
+
+
+// function grades(per) {
+//     if (per >= 90) {
+//         return 'A';
+//     }
+//     else if (per >= 80) {
+//         return 'B';
+//     }
+//     else {
+//         return 'c';
+//     }
+// }
+// function result(_totalmarks, _obtMarks){
+//      var x = percent(_totalmarks,_obtMarks);
+//      var y = grades(x);
+//     console.log('percent:',x,'grades',y)
+// }
+// result(232,111)
+// result(300,500)
 
 
 /// Recursing
 // Local 
 // Global
-function otpgenerator(){
-    return Math.random(Math.random*900+1000);
+// function otpgenerator(){
+//     return Math.random(Math.random*900+1000);
 
-}
- console.log(otpgenerator);
+// }
+//  console.log(otpgenerator);

@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 10px;
+}
+
+.main {
+    background-color: #0008ff;
+    padding: 30px;
+    max-width: 400px;
+    margin: 60px auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 50px;
+    border: 2px solid white;
+    background-color: #fff;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    color: #000;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555555;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 24px;
+    background-color: #ffffff;
+    color: #001aff;
+}
+
+.error-message {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    margin: 20px;
+    margin-left: 0%;
+    margin-right: auto;
+    font-size: 14px;
+}

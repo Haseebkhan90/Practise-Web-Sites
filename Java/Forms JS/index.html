@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <div class="main">
+    <h2 class="form-title">Contact Us</h2>
+    <form onsubmit="return validateForm(event)">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your name"
+        onfocus="this.style.padding='5px'"
+        onblur="formValidate(event)"
+        oninput="formValidate(event)">
+      <span id="nameError" class="error-message"></span>
+
+      <label for="email">Email Address:</label>
+      <input type="text" id="email" placeholder="Enter your email">
+      <span id="emailError" class="error-message"></span>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" placeholder="Enter phone number">
+      <span id="phoneError" class="error-message"></span>
+
+      <label for="cnic">CNIC:</label>
+      <input type="text" id="cnic" placeholder="Enter CNIC number">
+      <span id="cnicError" class="error-message"></span>
+
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" placeholder="Enter password">
+      <button type="button" onclick="passwordVisibility()">Show/Hide</button>
+      <span id="passError" class="error-message"></span>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script src="./script.js">
+   
+  </script>
+
+</body>
+</html>
