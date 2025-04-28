@@ -1,0 +1,148 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background: #ffffff; /* Creamy soft background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+  
+  /* Search Box */
+  #search-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    margin-bottom: 30px;
+    border: 2px solid #0040d4;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  #search-box:focus {
+    border-color: #ff5722;
+  }
+  
+  /* Main Container */
+  #main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Card */
+  .card {
+    background: #ffffff;
+    color: #212121;
+    padding: 20px;
+    border-radius: 14px;
+    width: 220px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 6px 14px rgba(66, 66, 166, 0.527);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  }
+  
+  .card:hover {
+    background: #d6b2ff;
+    color: white;
+    font-weight: bold;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 212, 138, 0.4);
+  }
+  
+  /* Popup Background */
+  #show {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Popup Details */
+  #details {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    animation: popupOpen 0.4s ease;
+  }
+  
+  /* Close Button */
+  #details button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #ff5722;
+    color: #ffffff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  #details button:hover {
+    background: #e64a19;
+  }
+  
+  /* Info inside popup */
+  #info {
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 1.7;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  
+  /* Animations */
+  @keyframes popupOpen {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .card {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 90%;
+    }
+  }
+  
