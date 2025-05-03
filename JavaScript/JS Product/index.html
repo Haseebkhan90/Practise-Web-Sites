@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electric Scooter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="content">
+    <div class="category">HOME / UNCATEGORIZED / ELECTRIC SCOOTER</div>
+    <h1>Electric Scooter</h1>
+    <p class="price-info">
+      Customers can book this item for units of weeks (7 days)<br>
+      <strong>Price:</strong> $120/week<br>
+      <strong>Max bookings:</strong> 10
+    </p>
+
+    <div class="reviews">
+      <h3>Reviews (0)</h3>
+      <p>There are no reviews yet.</p>
+      <p><strong>Be the first to review “Electric Scooter”</strong></p>
+    </div>
+  </div>
+
+  <div class="booking-box">
+    <div class="total" id="totalDisplay">$290.00</div>
+
+    <label for="start">Start date</label>
+    <input type="date" id="start" value="2021-12-20">
+
+    <label for="duration">Duration</label>
+    <input type="number" id="duration" value="7" min="7" step="7"> <span style="font-size: 12px;">day(s)</span>
+
+    <label for="people">People</label>
+    <select id="people">
+      <option value="1">1</option>
+      <option value="2" selected>2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+
+    <div class="price-breakdown">
+      <div><span>Base Price</span><span id="basePrice">$240.00</span></div>
+      <!-- <div><span>Insurance</span><span id="insurancePrice">$50.00</span></div> -->
+    </div>
+
+    <button class="add-to-cart">ADD TO CART</button>
+  </div>
+
+  <script src="./app.js">
+  </script>
+
+</body>
+</html>
