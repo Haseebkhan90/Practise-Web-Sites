@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.main {
+    padding: 30px;
+    max-width: 350px;
+    margin: 50px auto 20px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    border: 3px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: background-color 0.5s ease;
+}
+
+.card {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    display: inline-block;
+    border: 2px solid #222;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
+    cursor: pointer;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    .card {
+        width: 80px;
+        height: 80px;
+        margin: 8px;
+    }
+
+    .main {
+        font-size: 1.5em;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 70px;
+        height: 70px;
+        margin: 6px;
+    }
+
+    .main {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+}

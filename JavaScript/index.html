@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🚀 JS Projects Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()"> <span class="change-icon"> 🌑
+        </span> Dark Mode</button>
+
+    <header class="header">
+        <i class="fas fa-laptop-code"></i> Welcome To My JavaScript Projects Hub
+    </header>
+
+    <main class="projects">
+        <a href="./Game/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>🎮 Game JS</h2>
+            </section>
+        </a>
+        <a href="./JS Counter Application/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>🔢 JS Counter</h2>
+            </section>
+        </a>
+        <a href="./Objects/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>📦 Object JS</h2>
+            </section>
+        </a>
+        <a href="./Digital Clock/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>⏰ Digital Clock</h2>
+            </section>
+        </a>
+        <a href="./Calculator/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>🧮 Calculator</h2>
+            </section>
+        </a>
+        <a href="./Forms JS/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>📝 Forms (JS)</h2>
+            </section>
+        </a>
+        <a href="./Function/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>🧠 JS Function</h2>
+            </section>
+        </a>
+        <a href="./JS Percentage/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>📊 JS Percentage</h2>
+            </section>
+        </a>
+        <a href="./JS Table/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>📋 JS Table</h2>
+            </section>
+        </a>
+        <a href="./JS Arrays/index.html" target="_blank" class="project-link">
+            <section class="project-card">
+                <h2>📚 JS Arrays</h2>
+            </section>
+        </a>
+    </main>
+
+    <script>
+
+        var change = document.querySelector('.change-icon')
+
+        console.log(change);
+
+
+        function toggleDarkMode() {
+            if (document.body.classList.toggle('dark')) {
+                change.textContent = "🌕"
+            }
+            else {
+                change.textContent = "🌑"
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

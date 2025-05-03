@@ -1,0 +1,145 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #baff9f, #9fd7ff);
+  color: #1e1e2f;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.dark {
+  background: linear-gradient(135deg, #2d2d44, #1a1a2e);
+  color: #f5f5f5;
+}
+
+.dark .project-card {
+  background-color: #2c2c3f;
+  border-color: #47475e;
+}
+
+.dark .project-card a {
+  color: #ffb347;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 2.5rem;
+  color: #57765f;
+  line-height: normal;
+  font-weight: 700;
+  background-color: #c8ffe9ad;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 1s ease;
+  border: 1px solid #c8ffe9ad;
+  border-radius: 30px;
+}
+
+.dark .header {
+  background-color: #202032;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #cdacdbab;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+  background: #978a9c;
+  font-size: 1.25em;
+  /* width: 100%; */
+}
+
+/* Projects Layout */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Cards */
+.project-card {
+  background-color: #fff9f2;
+  border: 2px solid #000000;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease-in;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #289063;
+}
+
+.project-card a {
+  color: #ff4500;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .dark-mode-toggle {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.2rem;
+  }
+}
+/* Make entire card clickable */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-link:focus,
+.project-link:hover {
+  text-decoration: none;
+}
