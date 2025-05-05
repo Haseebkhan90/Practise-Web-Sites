@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumpster Rental | Easy Waste Management Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <h2>Dumpster Rentals Made Easy</h2>
+
+        <!-- Initial Form Section -->
+        <div id="initial-form">
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="address">1. Enter Your Address <span class="tooltip"><i
+                                class="fas fa-info-circle"></i><span class="tooltiptext">We need your address to check
+                                local availability and regulations</span></span></label>
+                    <input type="text" id="address" placeholder="123 Example Road, City, ZIP">
+                </div>
+                <div class="form-group">
+                    <label for="rentalType">2. What are you renting for?</label>
+                    <select id="rentalType">
+                        <option value="">Select</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="projectType">3. What are you disposing of?</label>
+                    <select id="projectType">
+                        <option value="">Select</option>
+                        <option value="household">Household Items</option>
+                        <option value="yard">Yard Waste</option>
+                        <option value="construction">Construction Material</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="search-btn pulse" onclick="showDumpster()">
+                <span class="spinner" id="search-spinner" style="display: none;"></span>
+                Search Available Dumpsters
+            </button>
+
+            <div class="dumpster-card" id="dumpsterCard">
+                <h3>10 Yard Roll Off Dumpster - $100</h3>
+                <img src="./asstes/30-Yard-HEADER-980x309.jpg"alt="Dumpster" class="dumpster-img">
+                <p><strong>Included:</strong> Delivery, pickup, 1 ton of debris, 7-day rental</p>
+                <p><strong>Address:</strong> <span id="outAddress"></span></p>
+                <p><strong>Rental Type:</strong> <span id="outRental"></span></p>
+                <p><strong>Project Type:</strong> <span id="outProject"></span></p>
+                <button class="search-btn" onclick="showOrderSummary()">Add to Cart</button>
+            </div>
+
+            <div class="trust-badges">
+                <img src="./asstes/30-Yard-HEADER-980x309.jpg" style="height: 30px;">
+                <span>ACCREDITED BUSINESS</span>
+            </div>
+        </div>
+
+        <!-- Order Summary Section (hidden initially) -->
+        <div class="order-container" id="order-summary">
+            <div class="order-main-content">
+                <!-- Delivery Date Section -->
+                <div class="order-section">
+                    <h2>Select Delivery Date</h2>
+                    <div class="delivery-date-picker">
+                        <div class="form-group-detailed">
+                            <label for="delivery-date">Preferred Delivery Date*</label>
+                            <input type="date" id="delivery-date" required>
+                        </div>
+
+                        <h3>Delivery Time Options</h3>
+                        <div class="delivery-options">
+                            <div class="delivery-option selected" onclick="selectDeliveryOption(this, 'morning')">
+                                <strong>Morning</strong>
+                                <p>8 AM - 12 PM</p>
+                            </div>
+                            <div class="delivery-option" onclick="selectDeliveryOption(this, 'afternoon')">
+                                <strong>Afternoon</strong>
+                                <p>12 PM - 4 PM</p>
+                            </div>
+                            <div class="delivery-option" onclick="selectDeliveryOption(this, 'evening')">
+                                <strong>Evening</strong>
+                                <p>4 PM - 8 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placement Information -->
+                <div class="order-section">
+                    <h2>Dumpster Placement</h2>
+                    <div class="map-section" id="dumpster-map">
+                        <!-- Map would be rendered here with a library like Google Maps -->
+                        <div class="dumpster-dimensions">
+                            <strong>10 Yard Dumpster</strong><br>
+                            App. Dimensions:<br>
+                            10'L × 7.5'W × 3.5'H
+                        </div>
+                    </div>
+
+                    <p>Move the dumpster to your desired drop location and click "Continue to place."</p>
+
+                    <div class="form-group-detailed">
+                        <label for="placement">Special Placement Instructions*</label>
+                        <textarea id="placement" rows="3"
+                            placeholder="e.g. Place dumpster on the left side of the driveway." required></textarea>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="permit-check" required>
+                        <label for="permit-check">I confirm that I have obtained all necessary permits for dumpster
+                            placement (if required)</label>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="order-section">
+                    <h2>Contact Information</h2>
+
+                    <div class="form-group-detailed">
+                        <label for="first-name">First Name*</label>
+                        <input type="text" id="first-name" placeholder="Enter Contact First Name" required>
+                    </div>
+
+                    <div class="form-group-detailed">
+                        <label for="last-name">Last Name*</label>
+                        <input type="text" id="last-name" placeholder="Enter Contact Last Name" required>
+                    </div>
+
+                    <div class="form-group-detailed">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="Enter Contact Email" required>
+                    </div>
+
+                    <div class="form-group-detailed">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" placeholder="(999) 999-9999" required>
+                        <small>Provide the number of the best person to contact for questions regarding this
+                            order</small>
+                    </div>
+
+                    <div class="form-group-detailed">
+                        <label for="apt">Apartment/Suite Number (Optional)</label>
+                        <input type="text" id="apt">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="same-address" checked>
+                        <label for="same-address">My Billing Information is the Same as my Delivery Information.</label>
+                    </div>
+                </div>
+
+                <button class="continue-btn" id="continue-button">Continue to Payment</button>
+            </div>
+
+            <!-- Order Summary Sidebar -->
+            <div class="order-summary-sidebar">
+                <h2>Order Summary</h2>
+                <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                    alt="Dumpster">
+
+                <div class="order-summary-item">
+                    <p><strong>Delivery To:</strong></p>
+                    <p id="sidebar-address">201 Biscayne Blvd, Miami, FL 33137</p>
+                    <button id="sidebar-edit-address"
+                        style="background: none; border: none; color: var(--primary); text-decoration: underline; padding: 0; cursor: pointer;">Edit</button>
+                </div>
+
+                <div class="order-summary-item">
+                    <p><strong>Delivery Date:</strong></p>
+                    <p id="sidebar-delivery-date">Not selected</p>
+                    <p id="sidebar-delivery-time">No time selected</p>
+                </div>
+
+                <div class="order-summary-item">
+                    <p><strong>Container:</strong></p>
+                    <p>10 Yard Dumpster</p>
+                    <p>Flat Rate Price: <span class="price">$100.00</span></p>
+                </div>
+
+                <div class="order-summary-item">
+                    <p><strong>Service Includes:</strong></p>
+                    <ul style="padding-left: 20px; margin: 10px 0;">
+                        <li>1 Tons of Debris</li>
+                        <li>07 Day Rental</li>
+                        <li>Delivery & Pickup</li>
+                        <li>Disposal Costs</li>
+                    </ul>
+                    <p>Sales Tax: <span class="price">$0.00</span></p>
+                </div>
+
+                <div class="total-cost">Total Cost: $100.00</div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="sidebar-lock-rate">
+                    <label for="sidebar-lock-rate">Lock in Your Rate for Later</label>
+                </div>
+
+                <div class="trust-badges">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Trustpilot_Logo_2022.svg/2560px-Trustpilot_Logo_2022.svg.png"
+                        alt="Trustpilot" style="height: 30px;">
+                    <span>ACCREDITED BUSINESS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show dumpster card after search
+        function showDumpster() {
+            const address = document.getElementById("address").value;
+            const rental = document.getElementById("rentalType").value;
+            const project = document.getElementById("projectType").value;
+
+            if (!address || !rental || !project) {
+                // Add shake animation to empty fields
+                if (!address) document.getElementById("address").classList.add("shake");
+                if (!rental) document.getElementById("rentalType").classList.add("shake");
+                if (!project) document.getElementById("projectType").classList.add("shake");
+
+                // Remove shake animation after it completes
+                setTimeout(() => {
+                    document.getElementById("address").classList.remove("shake");
+                    document.getElementById("rentalType").classList.remove("shake");
+                    document.getElementById("projectType").classList.remove("shake");
+                }, 500);
+
+                alert("Please fill all fields.");
+                return;
+            }
+
+            // Show loading spinner
+            const spinner = document.getElementById("search-spinner");
+            spinner.style.display = "inline-block";
+
+            // Simulate API call delay
+            setTimeout(() => {
+                spinner.style.display = "none";
+
+                document.getElementById("outAddress").textContent = address;
+                document.getElementById("outRental").textContent = document.getElementById("rentalType").options[document.getElementById("rentalType").selectedIndex].text;
+                document.getElementById("outProject").textContent = document.getElementById("projectType").options[document.getElementById("projectType").selectedIndex].text;
+
+                const dumpsterCard = document.getElementById("dumpsterCard");
+                dumpsterCard.style.display = "block";
+
+                // Scroll to dumpster card
+                dumpsterCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }, 1500);
+        }
+
+        // Show order summary after adding to cart
+        function showOrderSummary() {
+            document.getElementById("initial-form").style.display = "none";
+            document.getElementById("order-summary").style.display = "grid";
+
+            // Set the address from the initial form
+            const initialAddress = document.getElementById("address").value;
+            if (initialAddress) {
+                document.getElementById("sidebar-address").textContent = initialAddress;
+            }
+
+            // Set minimum delivery date to tomorrow
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const minDate = tomorrow.toISOString().split('T')[0];
+            document.getElementById("delivery-date").min = minDate;
+
+            // Set default delivery date to tomorrow
+            document.getElementById("delivery-date").value = minDate;
+            updateDeliveryDateDisplay(minDate);
+        }
+
+        // Select delivery time option
+        function selectDeliveryOption(element, time) {
+            // Remove selected class from all options
+            document.querySelectorAll('.delivery-option').forEach(opt => {
+                opt.classList.remove("selected");
+            });
+
+            // Add selected class to clicked option
+            element.classList.add("selected");
+
+            // Update sidebar display
+            const timeText = element.querySelector('strong').textContent + ' ' + element.querySelector('p').textContent;
+            document.getElementById("sidebar-delivery-time").textContent = timeText;
+        }
+
+        // Update delivery date display in sidebar
+        function updateDeliveryDateDisplay(dateString) {
+            if (dateString) {
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const date = new Date(dateString);
+                const formattedDate = date.toLocaleDateString('en-US', options);
+                document.getElementById("sidebar-delivery-date").textContent = formattedDate;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Edit address functionality
+            document.getElementById("sidebar-edit-address").addEventListener('click', function () {
+                const currentAddress = document.getElementById("sidebar-address").textContent;
+                const newAddress = prompt('Edit your delivery address:', currentAddress);
+                if (newAddress && newAddress.trim() !== '') {
+                    document.getElementById("sidebar-address").textContent = newAddress.trim();
+                }
+            });
+
+            // Delivery date change handler
+            document.getElementById("delivery-date").addEventListener('change', function () {
+                updateDeliveryDateDisplay(this.value);
+            });
+
+            // Form validation
+            const formFields = ['first-name', 'last-name', 'email', 'phone', 'placement', 'delivery-date'];
+            const continueButton = document.getElementById("continue-button");
+
+            continueButton.addEventListener('click', function (e) {
+                let isValid = true;
+
+                // Check required fields
+                formFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (!field.value.trim()) {
+                        field.style.borderColor = 'var(--error)';
+                        field.classList.add("shake");
+                        setTimeout(() => field.classList.remove("shake"), 500);
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = '#ddd';
+                    }
+                });
+
+                // Check permit checkbox
+                if (!document.getElementById("permit-check").checked) {
+                    document.getElementById("permit-check").parentElement.style.color = 'var(--error)';
+                    document.getElementById("permit-check").parentElement.classList.add("shake");
+                    setTimeout(() => document.getElementById("permit-check").parentElement.classList.remove("shake"), 500);
+                    isValid = false;
+                } else {
+                    document.getElementById("permit-check").parentElement.style.color = '';
+                }
+
+                // Validate email format
+                const email = document.getElementById("email").value;
+                if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    document.getElementById("email").style.borderColor = 'var(--error)';
+                    document.getElementById("email").classList.add("shake");
+                    setTimeout(() => document.getElementById("email").classList.remove("shake"), 500);
+                    isValid = false;
+                }
+
+                // Validate phone format
+                const phone = document.getElementById("phone").value;
+                if (phone && !/^\(\d{3}\) \d{3}-\d{4}$/.test(phone)) {
+                    document.getElementById("phone").style.borderColor = 'var(--error)';
+                    document.getElementById("phone").classList.add("shake");
+                    setTimeout(() => document.getElementById("phone").classList.remove("shake"), 500);
+                    isValid = false;
+                }
+
+                // Check if delivery time is selected
+                if (!document.querySelector('.delivery-option.selected')) {
+                    alert('Please select a delivery time option.');
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    e.preventDefault();
+                    // Scroll to first error
+                    const firstError = document.querySelector('[style*="border-color: var(--error)"]');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                } else {
+                    // In a real app, this would submit the form
+                    alert('Order submitted successfully! Redirecting to payment...');
+                    // window.location.href = '/payment';
+                }
+            });
+
+            // Phone number formatting
+            document.getElementById("phone").addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 0) {
+                    value = '(' + value.substring(0, 3) + ') ' + value.substring(3, 6) + '-' + value.substring(6, 10);
+                }
+                e.target.value = value;
+            });
+
+            // Simulate map interaction
+            const map = document.getElementById("dumpster-map");
+            map.addEventListener('click', function () {
+                alert('In a real implementation, this would allow you to select a drop location on the map.');
+            });
+
+            // Sync checkboxes
+            document.getElementById("lock-rate").addEventListener('change', function () {
+                document.getElementById("sidebar-lock-rate").checked = this.checked;
+            });
+
+            document.getElementById("sidebar-lock-rate").addEventListener('change', function () {
+                document.getElementById("lock-rate").checked = this.checked;
+            });
+        });
+    </script>
+</body>
+
+</html>
