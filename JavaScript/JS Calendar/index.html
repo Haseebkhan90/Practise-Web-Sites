@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket Availability Calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h2>🎟️ Ticket Calendar</h2>
+
+    <div class="calendar-container">
+        <select id="yearSelect"></select>
+        <select id="monthSelect"></select>
+        <div id="loading">⏳ Checking availability...</div>
+        <div class="available-date" id="ticketInfo"></div>
+    </div>
+
+    <button id="toggleTheme">🌙 Toggle Theme</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const currentMonth = currentDate.getMonth();
+
+            // Populate year dropdown (only current year for now)
+            $('#yearSelect').append(`<option value="${currentYear}" selected>${currentYear}</option>`);
+
+            // Populate month dropdown
+            function populateMonths(year) {
+                $('#monthSelect').empty();
+                $('#monthSelect').append(`<option value="" disabled selected>Select a month</option>`);
+                const months = [
+                    "January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"
+                ];
+
+                for (let m = 0; m < 12; m++) {
+                    if (year == currentYear && m <= currentMonth) {
+                        $('#monthSelect').append(`<option value="${m}" disabled>${months[m]} (Unavailable)</option>`);
+                    } else {
+                        $('#monthSelect').append(`<option value="${m}">${months[m]}</option>`);
+                    }
+                }
+            }
+
+            function updateTicketInfo() {
+                const selectedYear = parseInt($('#yearSelect').val());
+                const selectedMonth = $('#monthSelect').val();
+
+                if (!selectedYear || selectedMonth === null || selectedMonth === "") {
+                    $('#ticketInfo').html('⚠️ Please select both year and month.');
+                    $('#ticketInfo').css('color', '#b71c1c').css('background', '#fff3cd');
+                    return;
+                }
+
+                $('#loading').show();
+                setTimeout(() => {
+                    $('#loading').hide();
+
+                    const monthInt = parseInt(selectedMonth);
+                    const today = new Date();
+                    const ticketMonth = new Date(selectedYear, monthInt, 1);
+
+                    if (ticketMonth <= new Date(today.getFullYear(), today.getMonth(), 1)) {
+                        $('#ticketInfo').html('❌ This date has already passed or is the current month. Please choose a future month.')
+                            .css('color', '#b71c1c').css('background', '#ffebee');
+                    } else {
+                        // Find the first Friday
+                        let firstFriday = new Date(selectedYear, monthInt, 1);
+                        while (firstFriday.getDay() !== 5) { // 5 = Friday
+                            firstFriday.setDate(firstFriday.getDate() + 1);
+                        }
+
+                        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                        const formattedDate = firstFriday.toLocaleDateString('en-US', options);
+
+                        $('#ticketInfo').html(`🎫 Tickets are available on: <strong>${formattedDate}</strong>`)
+                            .css('color', '#2e7d32').css('background', '#e8f5e9');
+                    }
+                }, 500);
+            }
+
+            populateMonths(currentYear);
+            $('#ticketInfo').html('Please select a month.');
+
+            // Handlers
+            $('#yearSelect').change(function () {
+                populateMonths(this.value);
+                $('#ticketInfo').html('Please select a month.');
+            });
+
+            $('#monthSelect').change(updateTicketInfo);
+
+            // Theme toggle
+            $('#toggleTheme').click(function () {
+                $('body').toggleClass('dark-mode');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

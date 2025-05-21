@@ -1,0 +1,100 @@
+
+    :root {
+      --primary-color: #1e1e2f;
+      --secondary-color: #27293d;
+      --accent-color: #00c6ff;
+      --text-color: #ffffff;
+      --font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-family);
+      background: var(--primary-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: var(--secondary-color);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      width: 90%;
+      max-width: 450px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+
+    input {
+      padding: 0.5rem;
+      width: 70%;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      margin-bottom: 1rem;
+      background: #1e1e2f;
+      color: var(--text-color);
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #00a6d6;
+    }
+
+    .weather-info {
+      margin-top: 1rem;
+    }
+
+    .weather-info img {
+      width: 64px;
+    }
+
+    .forecast {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 1rem;
+    }
+
+    .forecast-day {
+      background: #1e1e2f;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .time {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  

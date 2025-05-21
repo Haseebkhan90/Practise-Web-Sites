@@ -1,0 +1,104 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.calendar-container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+select:hover {
+    border-color: #007bff;
+}
+
+.available-date {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #2e7d32;
+    background: #e8f5e9;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#loading {
+    margin-top: 10px;
+    color: #666;
+    display: none;
+}
+
+#toggleTheme {
+    margin-top: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .calendar-container {
+    background: #1e1e1e;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode select {
+    background: #2c2c2c;
+    color: #fff;
+    border-color: #555;
+}
+
+.dark-mode .available-date {
+    background: #264d28;
+    color: #a5d6a7;
+}
+
+@media (max-width: 500px) {
+    .calendar-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .available-date {
+        font-size: 16px;
+    }
+}

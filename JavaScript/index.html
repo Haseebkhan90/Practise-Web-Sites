@@ -2,103 +2,163 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🚀 JS Projects Hub</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🚀 JS Projects Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./style.css">
+  
 </head>
 
 <body>
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()"> <span class="change-icon"> 🌑
-        </span> Dark Mode</button>
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <span class="change-icon">🌑</span> Dark Mode
+  </button>
 
-    <header class="header">
-        <i class="fas fa-laptop-code"></i> Welcome To My JavaScript Projects Hub
-    </header>
+  <header>
+    <i class="fas fa-laptop-code"></i> Welcome to My JavaScript Projects Hub
+  </header>
 
-    <main class="projects">
-        <a href="./Game/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>🎮 Game JS</h2>
-            </section>
-        </a>
-        <a href="./JS Practise/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>🎮 JS Practise</h2>
-            </section>
-        </a>
-        <a href="./JS Product/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>🎮JS Product</h2>
-            </section>
-        </a>
-        <a href="./JS Counter Application/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>🔢 JS Counter</h2>
-            </section>
-        </a>
-        <a href="./Objects/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>📦 Object JS</h2>
-            </section>
-        </a>
-        <a href="./Digital Clock/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>⏰ Digital Clock</h2>
-            </section>
-        </a>
-        <a href="./Calculator/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>🧮 Calculator</h2>
-            </section>
-        </a>
-        <a href="./Forms JS/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>📝 Forms (JS)</h2>
-            </section>
-        </a>
-        <a href="./Function/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>🧠 JS Function</h2>
-            </section>
-        </a>
-        <a href="./JS Percentage/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>📊 JS Percentage</h2>
-            </section>
-        </a>
-        <a href="./JS Table/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>📋 JS Table</h2>
-            </section>
-        </a>
-        <a href="./JS Arrays/index.html" target="_blank" class="project-link">
-            <section class="project-card">
-                <h2>📚 JS Arrays</h2>
-            </section>
-        </a>
-    </main>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search projects..." onkeyup="filterProjects()">
+  </div>
 
-    <script>
+  <main class="projects">
 
-        var change = document.querySelector('.change-icon')
+  <a href="./Fetch Data/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-database fa-2x"></i>
+      <h2>Fetch Data</h2>
+    </section>
+  </a>
 
-        console.log(change);
+  <a href="./JS Calendar/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-calendar-alt fa-2x"></i>
+      <h2>Calendar</h2>
+    </section>
+  </a>
+
+  <a href="./JS Todo list/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-check-square fa-2x"></i>
+      <h2>Todo List</h2>
+    </section>
+  </a>
+
+  <a href="./Game/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-gamepad fa-2x"></i>
+      <h2>Game JS</h2>
+    </section>
+  </a>
+
+  <a href="./Weather App/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-cloud-sun-rain fa-2x"></i>
+      <h2>Weather App</h2>
+    </section>
+  </a>
+
+  <a href="./JS Practise/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-book fa-2x"></i>
+      <h2>JS Practise</h2>
+    </section>
+  </a>
+
+  <a href="./JS Product/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-shopping-cart fa-2x"></i>
+      <h2>JS Product</h2>
+    </section>
+  </a>
+
+  <a href="./JS Counter Application/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-sort-numeric-up fa-2x"></i>
+      <h2>JS Counter</h2>
+    </section>
+  </a>
+
+  <a href="./Objects/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-cubes fa-2x"></i>
+      <h2>Object JS</h2>
+    </section>
+  </a>
+
+  <a href="./Digital Clock/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-clock fa-2x"></i>
+      <h2>Digital Clock</h2>
+    </section>
+  </a>
+
+  <a href="./Calculator/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-calculator fa-2x"></i>
+      <h2>Calculator</h2>
+    </section>
+  </a>
+
+  <a href="./Forms JS/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-pen-square fa-2x"></i>
+      <h2>Forms (JS)</h2>
+    </section>
+  </a>
+
+  <a href="./Function/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-brain fa-2x"></i>
+      <h2>JS Function</h2>
+    </section>
+  </a>
+
+  <a href="./JS Percentage/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-percent fa-2x"></i>
+      <h2>JS Percentage</h2>
+    </section>
+  </a>
+
+  <a href="./JS Table/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-table fa-2x"></i>
+      <h2>JS Table</h2>
+    </section>
+  </a>
+
+  <a href="./JS Arrays/index.html" target="_blank" class="project-link">
+    <section class="project-card">
+      <i class="fas fa-layer-group fa-2x"></i>
+      <h2>JS Arrays</h2>
+    </section>
+  </a>
+
+</main>
 
 
-        function toggleDarkMode() {
-            if (document.body.classList.toggle('dark')) {
-                change.textContent = "🌕"
-            }
-            else {
-                change.textContent = "🌑"
-            }
+  <script>
+    const changeIcon = document.querySelector('.change-icon');
 
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      changeIcon.textContent = document.body.classList.contains('dark') ? "🌕" : "🌑";
+    }
 
-        }
-    </script>
+    function filterProjects() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const projects = document.querySelectorAll(".project-link");
+
+      projects.forEach(project => {
+        const text = project.textContent.toLowerCase();
+        project.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
 </body>
 
 </html>
